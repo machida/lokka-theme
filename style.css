@@ -230,6 +230,7 @@ color: #ec189a;
 	width:970px;
 	margin-left:auto;
 	margin-right:auto;
+	min-height:400px;
 }
 
 #main {
@@ -587,13 +588,22 @@ color: #ec189a;
 	text-align: center;
 	display: block;
 }
+#footer .poweredby {
+	color: #FFF;
+	text-align: right;
+	display: block;
+}
 #footer .copy a:link,
-#footer .copy a:visited {
+#footer .copy a:visited,
+#footer .poweredby a:link,
+#footer .poweredby a:visited {
 	text-decoration: none;
 	color: #FFF;
 }
 #footer .copy a:hover,
-#footer .copy a:active {
+#footer .copy a:active,
+#footer .poweredby a:hover,
+#footer .poweredby a:active {
 	color: #ec189a;
 	text-decoration: underline;
 }

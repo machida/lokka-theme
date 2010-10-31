@@ -29,12 +29,9 @@
       .section
         .nav
           %ul.wide
-            %li= link_to t.home, "/"
-            %li= link_to t.getting_started, "/getting-started-#{r18n.locale.code}"
-            %li= link_to t.contributor, "/contributor-#{r18n.locale.code}"
-            %li= link_to t.demo, 'http://demo.lokka.org/'
-            %li= link_to t.download, 'http://github.com/komagata/lokka/downloads'
-            %li= link_to t.source_code, 'http://github.com/komagata/lokka'
+            - Page.all.each do |page|
+              %li
+                %a{:href => page.link}= page.title
       .bred_crumbs.wide
         = bread_crumb
     #container
@@ -48,3 +45,6 @@
                 %li= link_to post.title, post.link
     #footer
       .copy= link_to @site.title, "/"
+      .poweredby.wide
+        powered by <a href="http://lokka.org">Lokka</a>
+
